@@ -7,13 +7,13 @@ from wordcloud import WordCloud
 
 #list of html tags to ignore when grabbing text
 tag_blacklist = [
-	'[document]',
-	'noscript',
-	'header',
-	'html',
-	'meta',
-	'head', 
-	'input',
+    '[document]',
+    'noscript',
+    'header',
+    'html',
+    'meta',
+    'head', 
+    'input',
     'script',
     'style',
 ]
@@ -95,7 +95,6 @@ def create_visualization(word_list):
     except:
         print("unable to write image to file")
     
-    #TODO: fix display
     img = Image.open("img/" + argv[2].strip())
     img.show()
 
