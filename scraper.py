@@ -134,6 +134,5 @@ def check_args():
         print("filename must have a proper extension, exiting")
         sysexit()
     
-
 if __name__ == "__main__": 
     main()
