@@ -93,7 +93,8 @@ def create_visualization(word_list):
         wordcloud.to_file("img/" + argv[2].strip())
         print("successfully wrote image as " + argv[2].strip())
     except:
-        print("unable to write image to file")
+        print("unable to write image to file, exiting")
+        sysexit()
     
     img = Image.open("img/" + argv[2].strip())
     img.show()
