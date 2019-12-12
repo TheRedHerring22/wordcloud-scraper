@@ -117,23 +117,27 @@ def make_https(url):
 def check_args():
     """checks if the user properly gave arguments"""
 
+    #if there are no arguments provided 
+    if(len(argv) == 1):
+        print("missing arguments, please enter a link and a filename\n")
+        print("run 'scraper.py help' for help")
+        sysexit()
+
     if(argv[1] == "help"):
         print("usage: py scraper.py [WEBSITE LINK] [FILENAME]")
         print("links that start with http:// or https:// are preferred.")
         print("filenames must end in .pdf, .png, or .jpg.")
         sysexit()
 
-    #if there are no arguments provided 
-    if(len(argv) == 1):
-        print("missing arguments, please enter a link and a filename")
-        sysexit()
     #if there is only a link provided
     elif(len(argv) == 2):
-        print("missing filename, exiting")
+        print("missing filename, exiting\n")
+        print("run 'scraper.py help' for help")
         sysexit()
     #if the filename given doesn't have an accepted filetype
     elif(argv[2][-4:] not in filetypes):
-        print("filename must have a proper extension, exiting")
+        print("filename must have a proper extension, exiting\n")
+        print("run 'scraper.py help' for help")
         sysexit()
     
 if __name__ == "__main__": 
