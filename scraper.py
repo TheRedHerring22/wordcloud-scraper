@@ -4,6 +4,7 @@ import requests
 from PIL import Image
 from bs4 import BeautifulSoup as bs
 from wordcloud import WordCloud
+#note: all external libraries are cited in report
 
 #list of html tags to ignore when grabbing text
 tag_blacklist = [
