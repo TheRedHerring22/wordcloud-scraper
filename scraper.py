@@ -4,6 +4,7 @@ import requests
 from PIL import Image
 from bs4 import BeautifulSoup as bs
 from wordcloud import WordCloud
+import os
 #note: all external libraries are cited in report
 
 #list of html tags to ignore when grabbing text
@@ -33,6 +34,10 @@ filetypes = [
 ]
 
 def main():
+
+    #create directory used for image
+    if not os.path.exists("img"):
+        os.mkdir("img")
 
     #make sure user entered a link and a filename
     check_args()
